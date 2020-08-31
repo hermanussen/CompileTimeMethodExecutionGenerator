@@ -47,7 +47,6 @@ As you can see, there are significant performance gains possible. Even though th
 I don't know. It's just something that I thought was interesting. There are many limitations at this point, that could be addressed:
 - I've only tested with `string` and `int` as the return type. Potentially, the generator could support any serializable type.
 - The methods can not have any parameters at this time. The parameter values should be known at compile time for this to work. Maybe adding the values to the attribute or looking at the syntax trees could be used to determine these values.
-- It might be nice to add a GitHub action so you can view the output that way.
 - There's probably a million ways in which using this could go wrong at this point. I should add some unit tests and handle many of the edge cases.
 - ... send me your ideas and opinions ([Send me a Tweet](https://twitter.com/knifecore/))!
 
