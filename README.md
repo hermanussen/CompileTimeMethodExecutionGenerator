@@ -1,3 +1,5 @@
+![dotnet](https://github.com/hermanussen/CompileTimeMethodExecutionGenerator/workflows/dotnet/badge.svg)
+
 # Compile Time Method Execution Generator
 
 A ".NET 5 preview" source generator proof of concept that allows executing a method during compilation, so that it can be really fast during runtime.
@@ -27,6 +29,16 @@ It may actually be a really bad idea to use this, once .NET 5 is released. I cou
 Well, take a look for yourself! The "CompileTimeMethodExecutionGenerator.Example" shows how you could use the generator. A method that calculates pi in 20000 digits is decorated with the "CompileTime" attribute. The program benchmarks running the method during runtime as well as compile time.
 
 If you want to understand the inner workings, then take a look at the "CompileTimeMethodExecutionGenerator.Generator" project, which contains the actual generator.
+
+## How can I see the result?
+
+Just take a look at the output of [the latest run here](https://github.com/hermanussen/CompileTimeMethodExecutionGenerator/actions?query=workflow%3Adotnet). In the build log, expand the "Run" section and you'll find something like this:
+```
+Pi calculated with 20000 digits
+Execution took 26482.0309ms
+Pi calculated with 20000 digits (but performed calculation during compilation)
+Execution took 0.2029ms
+```
 
 ## How can I run it myself?
 
