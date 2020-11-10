@@ -29,7 +29,7 @@ namespace CompileTimeMethodExecutionGenerator
     }
 }";
 
-        public void Execute(SourceGeneratorContext context)
+        public void Execute(GeneratorExecutionContext context)
         {
             // Always add the attribute itself to the compilation
             context.AddSource("CompileTimeExecutorAttribute", SourceText.From(attributeText, Encoding.UTF8));
@@ -130,7 +130,7 @@ namespace CompileTimeMethodExecutionGenerator
             }
         }
 
-        public void Initialize(InitializationContext context)
+        public void Initialize(GeneratorInitializationContext context)
         {
             // Register a syntax receiver that will be created for each generation pass
             context.RegisterForSyntaxNotifications(() => new SyntaxReceiver());

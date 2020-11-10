@@ -2,7 +2,7 @@
 
 # Compile Time Method Execution Generator
 
-A ".NET 5 preview" source generator proof of concept that allows executing a method during compilation, so that it can be really fast during runtime.
+A ".NET 5" source generator proof of concept that allows executing a method during compilation, so that it can be really fast during runtime.
 
 ## What does it do?
 
@@ -22,7 +22,7 @@ I just thought it would be fun. And potentially, it could be useful if you have 
 - You may want to change the implementation of the method during development
 - You don't mind if this slightly slows down your project's compilation
 
-It may actually be a really bad idea to use this, once .NET 5 is released. I could imagine that visual studio will be very slow because of this (because the live compilation will also be very slow).
+It may actually be a really bad idea to use this. I could imagine that visual studio will be very slow because of this (because the live compilation will also be very slow).
 
 ## How does it work?
 
